@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Platia:wght@700&display=swap');
+
+.font-[Platia] {
+  font-family: 'Platia', sans-serif;
+}
+
+@keyframes pulse-cross {
+  0%, 100% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.animate-pulse-cross {
+  animation: pulse-cross 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* move up 20px */
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 15s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 15s linear infinite;
+}
