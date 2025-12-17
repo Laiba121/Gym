@@ -1,25 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Header from "./components/layout/Header";
-import HeroSection from "./components/HeroSection";
-import FeatureSection from "./components/FeatureSection";
-import AboutSection from "./components/AboutSection";
-import WhyChooseUs from "./components/WhyChooseUs";
-import BmiCalculator from "./components/BmiCalculator";
-import Newsletter from "./components/NewsletterSection";
 import Footer from "./components/layout/Footer";
+import HomePage from "./pages/homePage"; 
+import AboutPage from "./pages/aboutPage"; 
+import ServicePage from "./pages/servicePage"; 
 
 export default function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <HeroSection />
-      <FeatureSection />
-
-      <AboutSection />
-       <WhyChooseUs />
-        <BmiCalculator />
-         <Newsletter />
-       <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicePage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }

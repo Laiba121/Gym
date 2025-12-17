@@ -20,7 +20,7 @@ const NewsletterSection = () => {
           />
         </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-widest uppercase">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-[Platia] font-extrabold tracking-[0.1em] uppercase">
             Stay Connected With Us
           </h2>
 

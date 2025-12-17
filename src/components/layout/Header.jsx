@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const menuItems = ["HOME", "ABOUT US", "SERVICES", "CONTACT"];
+  const menuItems = [
+    { name: "HOME", path: "/" },
+    { name: "ABOUT US", path: "/about" },
+    { name: "SERVICES", path: "/services" },
+    { name: "CONTACT", path: "/#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +29,6 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex items-center justify-between">
-
           {/* LOGO */}
           <div className="flex items-center space-x-4 py-6">
             <img src="/images/logo.png" alt="logo" className="h-10 w-auto" />
@@ -35,12 +40,11 @@ export default function Header() {
           {/* DESKTOP MENU */}
           <nav className="hidden lg:flex items-center text-white text-sm font-semibold">
             {menuItems.map((item) => (
-              <div
-                key={item}
-                className="px-8 xl:px-12 py-6 border-r border-white/10 hover:text-[#ff4d2d] transition cursor-pointer"
-              >
-                {item}
-              </div>
+              <Link key={item.name} to={item.path}>
+                <div className="px-8 xl:px-12 py-6 border-r border-white/10 hover:text-[#ff4d2d] transition cursor-pointer">
+                  {item.name}
+                </div>
+              </Link>
             ))}
           </nav>
 
@@ -64,29 +68,26 @@ export default function Header() {
       </div>
 
       {/* MOBILE MENU */}
-<div
-  className={`lg:hidden absolute left-0 w-full z-60 bg-black border-t border-white/10 transition-all duration-300 overflow-hidden ${
-    open ? "max-h-[400px] z-100 opacity-100" : "max-h-0 opacity-0"
-  }`}
->
-  <nav className="flex flex-col text-white text-sm font-semibold text-center">
-    {menuItems.map((item) => (
       <div
-        key={item}
-        onClick={() => setOpen(false)}
-        className="px-6 py-5 border-b border-white/10 hover:bg-[#ff4d2d] hover:text-black transition cursor-pointer tracking-widest"
+        className={`lg:hidden absolute left-0 w-full z-60 bg-black border-t border-white/10 transition-all duration-300 overflow-hidden ${
+          open ? "max-h-[400px] z-100 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
-        {item}
+        <nav className="flex flex-col text-white text-sm font-semibold text-center">
+          {menuItems.map((item) => (
+            <Link key={item.name} to={item.path} onClick={() => setOpen(false)}>
+              <div className="px-6 py-5 border-b border-white/10 hover:bg-[#ff4d2d] hover:text-black transition cursor-pointer tracking-widest">
+                {item.name}
+              </div>
+            </Link>
+          ))}
+
+          {/* MOBILE CTA */}
+          <div className="mx-auto w-40 mb-10 py-4 bg-[#ff4d2d] text-black font-extrabold tracking-widest cursor-pointer transition hover:bg-[#ff6a4d]">
+            JOIN US TODAY
+          </div>
+        </nav>
       </div>
-    ))}
-
-    {/* MOBILE CTA */}
-    <div className="mx-auto w-40 mb-10 py-4 bg-[#ff4d2d] text-black font-extrabold tracking-widest cursor-pointer transition hover:bg-[#ff6a4d]">
-      JOIN US TODAY
-    </div>
-  </nav>
-</div>
-
     </header>
   );
 }

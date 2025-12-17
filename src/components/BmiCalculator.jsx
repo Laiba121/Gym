@@ -58,7 +58,7 @@ const BMICalculator = () => {
             alt="decorative"
             className="w-17 mx-auto mb-6"
           />
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-widest uppercase">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-[Platia] font-extrabold tracking-[0.1em] uppercase">
             Calculate Your <br /> BMI Now!!
           </h2>
         </div>
@@ -87,12 +87,22 @@ const BMICalculator = () => {
             options={["Low", "Moderate", "High"]}
           />
 
-          <button
-            onClick={calculateBMI}
-            className="h-[58px] bg-[#ff4d2d] text-black font-extrabold tracking-widest uppercase hover:bg-white transition"
-          >
-            Calculate BMI
-          </button>
+   
+
+{/* Calculate BMI button with animated bg like Subscribe */}
+<button
+  onClick={calculateBMI}
+  className="relative h-[58px] w-[200px] overflow-hidden font-extrabold uppercase tracking-widest bg-[#ff4d2d] text-black group"
+>
+  {/* animated background */}
+  <span className="absolute inset-0 bg-black translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+
+  {/* button text */}
+  <span className="relative z-10 transition-colors duration-300 group-hover:text-[#ff4d2d]">
+    Calculate BMI
+  </span>
+</button>
+
         </div>
 
         {/* RESULT */}

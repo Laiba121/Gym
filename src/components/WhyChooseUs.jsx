@@ -7,7 +7,7 @@ const WhyChooseUs = () => {
     <section className="bg-[#0b0b0b] text-white py-15 md:py-24">
       <div className="max-w-full mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-[42px] md:text-[70px] font-[Platia] font-extrabold tracking-[0.1em] mb-20">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-[Platia] font-extrabold tracking-[0.1em] mb-20">
           WHY CHOOSE US
         </h2>
 
