@@ -4,21 +4,35 @@ import OpeningHours from "./OpeningHours";
 
 export default function ContactMapSection() {
   return (
-    <section className="relative bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
-        
-        <div className="relative flex flex-col lg:flex-row gap-8">
-          
-          {/* Map */}
-          <div className="flex-1 relative overflow-hidden">
-            <MapSection />
-          </div>
+    <section className="bg-black py-12 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative">
 
-          {/* Opening Hours */}
-          <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 shadow-2xl">
+        {/* Map container */}
+        <div className="relative w-full overflow-hidden rounded-2xl">
+
+          {/* Map */}
+          <MapSection />
+
+          {/* Opening Hours overlay on large screens, left side */}
+          <div
+            className="
+              hidden lg:block
+              absolute
+              top-1/2 left-8
+              -translate-y-1/2
+              w-[380px] xl:w-[420px]
+              max-w-full
+              z-20
+              shadow-2xl
+            "
+          >
             <OpeningHours />
           </div>
+        </div>
 
+        {/* Opening Hours below map on < lg screens */}
+        <div className="block lg:hidden mt-6 w-full max-w-md mx-auto shadow-2xl">
+          <OpeningHours />
         </div>
 
       </div>

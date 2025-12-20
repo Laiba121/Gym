@@ -38,7 +38,7 @@ export default function Header() {
           {/* DESKTOP MENU - Updated with orange line animation */}
           <nav className="hidden lg:flex items-center text-white text-sm font-semibold">
             {menuItems.map((item) => (
-              <Link key={item.name} to={item.path}>
+              <Link key={item.name} to={item.path} >
                 <div className="px-8 xl:px-12 py-6 border-r border-white/10 hover:text-[#A58120] transition cursor-pointer relative overflow-hidden group">
                   {/* Orange line animation */}
                   <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#A58120] group-hover:w-full transition-all duration-300" />

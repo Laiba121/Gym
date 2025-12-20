@@ -26,14 +26,14 @@ export default function ContactFormSection() {
             <input
               type="text"
               placeholder="Your full name"
-              className="bg-[#111111] border border-white/10 px-5 py-4 text-white placeholder-white/50 focus:outline-none focus:border-[#ff4d2d] transition"
+              className="bg-[#111111] border border-white/10 px-5 py-4 text-white placeholder-white/50 focus:outline-none focus:border-[#A58120] transition"
             />
 
             {/* Email */}
             <input
               type="email"
               placeholder="E-mail address"
-              className="bg-[#111111] border border-white/10 px-5 py-4 text-white placeholder-white/50 focus:outline-none focus:border-[#ff4d2d] transition"
+              className="bg-[#111111] border border-white/10 px-5 py-4 text-white placeholder-white/50 focus:outline-none focus:border-[#A58120] transition"
             />
           </div>
 
@@ -48,23 +48,23 @@ export default function ContactFormSection() {
           <textarea
             rows="6"
             placeholder="Your message"
-            className="w-full mt-6 bg-[#111111] border border-white/10 px-5 py-4 text-white placeholder-white/50 focus:outline-none focus:border-[#ff4d2d] transition resize-none"
+            className="w-full mt-6 bg-[#111111] border border-white/10 px-5 py-4 text-white placeholder-white/50 focus:outline-none focus:border-[#A58120] transition resize-none"
           />
 
          <button
   type="submit"
-  className="mt-8 relative bg-[#3a3a3a] text-white font-bold tracking-widest uppercase px-10 py-4 hover:bg-[#ff4d2d] transition-all duration-500 flex items-center gap-3 group overflow-hidden"
+  className="mt-8 relative bg-[#3a3a3a] text-white font-bold tracking-widest uppercase px-10 py-4 hover:bg-[#A58120] transition-all duration-500 flex items-center gap-3 group overflow-hidden"
 >
   <span className="relative z-10">GET STARTED TODAY</span>
   <span className="relative z-10 text-xl">+</span>
 
   {/* Starting as thin side bars, expanding to fill from sides */}
-  <span className="absolute left-0 top-0 h-full w-1 bg-[#ff4d2d] group-hover:w-1/2 transition-all duration-500" />
-  <span className="absolute right-0 top-0 h-full w-1 bg-[#ff4d2d] group-hover:w-1/2 transition-all duration-500" />
+  <span className="absolute left-0 top-0 h-full w-1 bg-[#A58120] group-hover:w-1/2 transition-all duration-500" />
+  <span className="absolute right-0 top-0 h-full w-1 bg-[#A58120] group-hover:w-1/2 transition-all duration-500" />
 
             {/* Orange side bars */}
-            <span className="absolute left-0 top-0 h-full w-1 bg-[#ff4d2d]" />
-            <span className="absolute right-0 top-0 h-full w-1 bg-[#ff4d2d]" />
+            <span className="absolute left-0 top-0 h-full w-1 bg-[#A58120]" />
+            <span className="absolute right-0 top-0 h-full w-1 bg-[#A58120]" />
           </button>
         </form>
       </div>

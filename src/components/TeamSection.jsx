@@ -15,11 +15,12 @@ export default function TeamSlider() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 700,
+    speed: 400,            // smooth slide
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: true,        // auto slide
+    autoplaySpeed: 3000,   // 3s per slide
+    cssEase: "linear",     // smooth continuous movement
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -27,12 +28,12 @@ export default function TeamSlider() {
       { breakpoint: 1536, settings: { slidesToShow: 4 } },
       { breakpoint: 1280, settings: { slidesToShow: 3 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } }, // hide arrows on mobile
     ],
   };
 
   return (
-    <section className="bg-black py-16 sm:py-20 md:py-24 overflow-hidden">
+    <section className="bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative">
 
         {/* Header */}
@@ -40,7 +41,7 @@ export default function TeamSlider() {
           <p className="text-[#A58120] uppercase tracking-widest text-xs sm:text-sm mb-2">
             Our Trainers
           </p>
-          <h2 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl xl:text-6xl tracking-wide">
+          <h2 className="text-white font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-wide">
             Meet The Team
           </h2>
         </div>
@@ -48,15 +49,15 @@ export default function TeamSlider() {
         {/* Slider */}
         <Slider {...settings}>
           {team.map((member, i) => (
-            <div key={i} className="px-3">
+            <div key={i} className="px-2 sm:px-3">
               <div className="group bg-[#111] rounded-2xl overflow-hidden transition duration-500 hover:scale-[1.03] shadow-lg">
 
                 {/* Image */}
-                <div className="relative">
+                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-[260px] sm:h-[300px] md:h-[340px] lg:h-[380px] object-cover"
+                    className="w-full h-full object-cover"
                   />
 
                   {/* Hover Overlay */}
@@ -73,11 +74,11 @@ export default function TeamSlider() {
                 </div>
 
                 {/* Text */}
-                <div className="text-center py-5 px-4">
-                  <h3 className="text-white font-bold text-lg sm:text-xl md:text-2xl">
+                <div className="text-center py-4 sm:py-5 px-3 sm:px-4">
+                  <h3 className="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
                     {member.name}
                   </h3>
-                  <p className="text-[#A58120] uppercase tracking-widest text-xs sm:text-sm mt-2">
+                  <p className="text-[#A58120] uppercase tracking-widest text-xs sm:text-sm mt-1 sm:mt-2">
                     {member.role}
                   </p>
                 </div>
@@ -91,21 +92,11 @@ export default function TeamSlider() {
   );
 }
 
-
 function NextArrow({ onClick }) {
   return (
     <div
       onClick={onClick}
-      className="
-        absolute top-1/2 -translate-y-1/2
-        right-2 sm:right-4
-        w-10 h-10 sm:w-12 sm:h-12
-        bg-[#A58120] rounded-full
-        flex items-center justify-center
-        text-white cursor-pointer
-        z-30 shadow-lg
-        hover:scale-110 transition
-      "
+      className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-[#A58120] rounded-full flex items-center justify-center text-white cursor-pointer z-30 shadow-lg hover:scale-110 transition"
     >
       →
     </div>
@@ -116,16 +107,7 @@ function PrevArrow({ onClick }) {
   return (
     <div
       onClick={onClick}
-      className="
-        absolute top-1/2 -translate-y-1/2
-        left-2 sm:left-4
-        w-10 h-10 sm:w-12 sm:h-12
-        bg-[#A58120] rounded-full
-        flex items-center justify-center
-        text-white cursor-pointer
-        z-30 shadow-lg
-        hover:scale-110 transition
-      "
+      className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 w-8 h-8 sm:w-10 sm:h-10 bg-[#A58120] rounded-full flex items-center justify-center text-white cursor-pointer z-30 shadow-lg hover:scale-110 transition"
     >
       ←
     </div>

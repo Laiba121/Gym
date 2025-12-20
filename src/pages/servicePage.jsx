@@ -17,7 +17,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-[50vh] lg:h-[60vh]">
         <img
-          src="/images/services.avif"
+          src="/images/about-bg1.jpg"
           alt="Services Hero"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
@@ -25,13 +25,13 @@ export default function ServicesPage() {
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2">
             Our Services
           </h1>
-          <p className="text-[#ff4d2d] text-lg sm:text-xl md:text-2xl tracking-wide">
+          <p className="text-[#A58120] text-lg sm:text-xl md:text-2xl tracking-wide">
             Explore what we offer to boost your fitness journey
           </p>
            <p className="mt-4 text-sm sm:text-base tracking-widest uppercase">
           <span className="text-white">Home</span>
           <span className="text-white mx-2">•</span>
-          <span className="text-[#ff4d2d]">Services</span>
+          <span className="text-[#A58120]">Services</span>
         </p>
         </div>
       </section>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70 z-20 rounded-2xl"></div>
               <div className="relative z-30 p-6 flex flex-col gap-2">
                 <img
-                  src="/images/featuredec.png"
+                  src="/images/featuredec1.png"
                   alt="decorative slashes"
                   className="w-12 sm:w-14"
                 />

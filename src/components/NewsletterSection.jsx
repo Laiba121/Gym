@@ -4,17 +4,17 @@ const NewsletterSection = () => {
   return (
     <section className="relative w-full py-28 bg-black overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#2a120c] to-black opacity-95" />
+      <div className="absolute inset-0 bg-black opacity-95" />
 
       {/* Orange Accent Bar */}
-      <div className="absolute top-0 left-0 w-[260px] h-6 bg-[#ff4d2d]" />
+      <div className="absolute top-0 left-0 w-[260px] h-6 bg-[#A58120]" />
 
       <div className="relative max-w-6xl mx-auto px-6 text-center text-white">
         {/* Heading */}
         <div className="mb-14">
          <div className="text-center mb-7">
           <img
-            src="/images/featuredec.png"
+            src="/images/featuredec1.png"
             alt="decorative"
             className="w-17 mx-auto"
           />
@@ -37,22 +37,22 @@ const NewsletterSection = () => {
     href="https://www.facebook.com/profile.php?id=61583350382077&sk=about"
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative h-[60px] px-10 overflow-hidden bg-[#ff4d2d] text-black font-extrabold tracking-widest uppercase flex items-center justify-center"
+    className="group relative h-[60px] px-10 overflow-hidden bg-[#A58120] text-black font-extrabold tracking-widest uppercase flex items-center justify-center"
   >
     {/* animated bg */}
     <span className="absolute inset-0 bg-black translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
 
     {/* text */}
-    <span className="relative z-10 transition-colors duration-300 group-hover:text-[#ff4d2d]">
+    <span className="relative z-10 transition-colors duration-300 group-hover:text-[#A58120]">
       Subscribe
     </span>
   </a>
 
 
-         <button className="group relative h-[60px] px-10 overflow-hidden border-2 border-[#ff4d2d] text-[#ff4d2d] font-extrabold tracking-widest uppercase">
+         <button className="group relative h-[60px] px-10 overflow-hidden border-2 border-[#A58120] text-[#A58120] font-extrabold tracking-widest uppercase">
   
   {/* animated bg */}
-  <span className="absolute inset-0 bg-[#ff4d2d] scale-y-0 origin-bottom transition-transform duration-300 group-hover:scale-y-100" />
+  <span className="absolute inset-0 bg-[#A58120] scale-y-0 origin-bottom transition-transform duration-300 group-hover:scale-y-100" />
 
   {/* text */}
   <span className="relative z-10 transition-colors duration-300 group-hover:text-black">

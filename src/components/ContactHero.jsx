@@ -6,7 +6,7 @@ export default function ContactHero() {
       
       {/* Background Image */}
       <img
-        src="/images/contact.jpg" // use any contact image
+        src="/images/about-bg1.jpg" // use any contact image
         alt="Contact Hero"
         className="absolute inset-0 w-full h-full object-cover opacity-50"
       />
@@ -20,7 +20,7 @@ export default function ContactHero() {
           Contact Us
         </h1>
 
-        <p className="text-[#ff4d2d] text-lg sm:text-xl md:text-2xl tracking-wide">
+        <p className="text-[#A58120] text-lg sm:text-xl md:text-2xl tracking-wide">
           We’re here to help you start your fitness journey
         </p>
 
@@ -28,7 +28,7 @@ export default function ContactHero() {
         <p className="mt-4 text-sm sm:text-base tracking-widest uppercase">
           <span className="text-white">Home</span>
           <span className="text-white mx-2">•</span>
-          <span className="text-[#ff4d2d]">Contact</span>
+          <span className="text-[#A58120]">Contact</span>
         </p>
       </div>
     </section>

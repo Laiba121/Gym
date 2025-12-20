@@ -26,12 +26,12 @@ function PrevArrow({ onClick }) {
 
 
 const cards = [
-  { title: "GROUP\nWORKOUT", image: "/images/feature3.jpg", number: "01" },
-  { title: "PERSONAL\nTRAINING", image: "/images/feature2.jpg", number: "02" },
-  { title: "MUSCLE\nBUILDING", image: "/images/feature4.jpg", number: "03" },
-  { title: "DIGITAL\nCOACHING", image: "/images/feature5.jpg", number: "04" },
-  { title: "PERSONAL\nTRAINING", image: "/images/feature6.jpg", number: "05" },
-  { title: "WEIGHTLOSS\nPROGRAM", image: "/images/feature1.jpg", number: "06" },
+  { title: "FULLY EQUIPPED GYM", image: "/images/feature3.jpg", number: "01" },
+  { title: "PERSONAL TRAINING", image: "/images/feature2.jpg", number: "02" },
+  { title: "GROUP CLASSES", image: "/images/feature4.jpg", number: "03" },
+  { title: "NUTROTION & FITNESS", image: "/images/feature5.jpg", number: "04" },
+  { title: "MEN'S & WOMEN'S SECTIONS", image: "/images/feature6.jpg", number: "05" },
+  { title: "LOCKER ROOMS & SHOWERS", image: "/images/feature1.jpg", number: "06" },
 ];
 
 export default function ServicesSection() {
@@ -119,7 +119,7 @@ export default function ServicesSection() {
                   </div>
 
                   <span
-                    className="absolute bottom-1 left-2 text-[60px] sm:text-[80px] md:text-[110px] font-extrabold z-20"
+                    className="absolute -bottom-5 left-2 text-[60px] sm:text-[80px] md:text-[110px] font-extrabold z-20"
                     style={{
                       WebkitTextStroke: "1px rgba(255,255,255,0.15)",
                       color: "transparent",

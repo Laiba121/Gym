@@ -6,7 +6,7 @@ export default function ContactInfoCard({ title, subtitle, value }) {
       
       {/* Title */}
       <h3 className="text-white font-extrabold tracking-widest flex items-center gap-3 text-lg">
-        <span className="text-[#ff4d2d]">///</span>
+        <span className="text-[#A58120]">///</span>
         {title}
       </h3>
 
