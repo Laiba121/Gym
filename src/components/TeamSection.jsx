@@ -15,20 +15,20 @@ export default function TeamSlider() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 400,            // smooth slide
-    slidesToShow: 4,
+    speed: 700,
+    slidesToShow: 4, // default for large screens
     slidesToScroll: 1,
-    autoplay: true,        // auto slide
-    autoplaySpeed: 3000,   // 3s per slide
-    cssEase: "linear",     // smooth continuous movement
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
-      { breakpoint: 1536, settings: { slidesToShow: 4 } },
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } }, // hide arrows on mobile
+      { breakpoint: 1536, settings: { slidesToShow: 4 } }, // xl
+      { breakpoint: 1280, settings: { slidesToShow: 3 } }, // lg
+      { breakpoint: 1024, settings: { slidesToShow: 2 } }, // md
+      { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } }, // sm/mobile
     ],
   };
 
