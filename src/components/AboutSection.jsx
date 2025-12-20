@@ -18,7 +18,7 @@ export default function HeroFitnessExact() {
       }}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black" />
+      <div className="absolute inset-0 bg-black" />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-8 lg:pt-40 grid grid-cols-12 xl:gap-10 items-start">
         {/* LEFT CONTENT */}
@@ -39,15 +39,23 @@ export default function HeroFitnessExact() {
 
           {/* CTA */}
          <div className="mt-10 flex items-center justify-center gap-4">
-  <button
-    className="relative px-7 py-4 bg-gray-600 text-white text-sm font-semibold uppercase tracking-wide
-               overflow-hidden"
-  >
+ <button
+  className="relative px-7 py-4 bg-gray-600 text-white text-sm font-semibold uppercase tracking-wide
+             overflow-hidden group transition-all duration-500"
+>
+  {/* Left Orange Line - expands from 0 to half width */}
+  <span className="absolute left-0 top-0 h-full w-0 bg-[#A58120] 
+                   group-hover:w-1/2 transition-all duration-500 ease-out" />
+
+  {/* Right Orange Line - expands from 0 to half width */}
+  <span className="absolute right-0 top-0 h-full w-0 bg-[#A58120] 
+                   group-hover:w-1/2 transition-all duration-500 ease-out" />
+
     {/* Left Orange Line */}
-    <span className="absolute left-0 top-0 h-full w-[4px] bg-[#ff4d24]" />
+    <span className="absolute left-0 top-0 h-full w-[4px] bg-[#A58120]" />
 
     {/* Right Orange Line */}
-    <span className="absolute right-0 top-0 h-full w-[4px] bg-[#ff4d24]" />
+    <span className="absolute right-0 top-0 h-full w-[4px] bg-[#A58120]" />
 
     {/* Button Text */}
     <span className="relative z-10">Get Started Today +</span>
@@ -78,7 +86,7 @@ export default function HeroFitnessExact() {
       >
         <div className="flex gap-2 xl:gap-4">
           <img
-            src="/images/featuredec.png"
+            src="/images/featuredec1.png"
             alt={stat.label}
             className="w-10 xl:w-14 h-auto object-contain rounded-full mb-2"
           />
@@ -93,11 +101,11 @@ export default function HeroFitnessExact() {
           animate={{ width: "100%" }}
           transition={{ duration: 1.5, delay: i * 0.3 }}
         >
-          {stat.value.toLocaleString()} <span className="text-[#ff4d24]">+</span>
+          {stat.value.toLocaleString()} <span className="text-[#A58120]">+</span>
         </motion.h3>
 
         <motion.span
-          className="absolute bottom-0 right-0 h-[3px] bg-[#ff4d24]"
+          className="absolute bottom-0 right-0 h-[3px] bg-[#A58120]"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{ duration: 1.5, delay: i * 0.3 }}

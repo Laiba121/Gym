@@ -3,7 +3,7 @@ import {
   FaFacebookF,
   FaGooglePlusG,
   FaInstagram,
-  FaPinterestP,
+  FaTiktok,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -87,35 +87,45 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* BOTTOM BAR */}
-          <div className="border-t border-white/10 bg-black">
-            <div className="max-w-[95%] lg:max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-6 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0 text-center lg:text-left">
-              <p className="text-xs sm:text-sm text-white/50">
-                © 2023 <span className="text-[#ff4d2d]">QRGYM</span>. All rights
-                reserved by <span className="text-[#ff4d2d]">BravisThemes</span>
-              </p>
-              <div className="flex gap-3">
-                {[FaFacebookF, FaGooglePlusG, FaInstagram, FaPinterestP].map(
-                  (Icon, i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 sm:w-11 sm:h-11 bg-[#141414] flex items-center justify-center hover:bg-[#ff4d2d] transition cursor-pointer"
-                    >
-                      <Icon className="text-white" />
-                    </div>
-                  )
-                )}
-              </div>
-              <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm text-white/50">
-                <span className="hover:text-white cursor-pointer">
-                  Privacy Policy
-                </span>
-                <span className="hover:text-white cursor-pointer">
-                  Terms & Condition
-                </span>
-              </div>
-            </div>
+      {/* BOTTOM BAR */}
+      <div className="border-t border-white/10 bg-black">
+        <div className="max-w-[95%] lg:max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-6 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0 text-center lg:text-left">
+          <p className="text-xs sm:text-sm text-white/50">
+            © 2023 <span className="text-[#ff4d2d]">QRGYM</span>. All rights
+            reserved by <span className="text-[#ff4d2d]">BravisThemes</span>
+          </p>
+          
+          <div className="flex gap-3">
+            {[
+              { Icon: FaFacebookF, link: "https://www.facebook.com/profile.php?id=61583350382077&sk=about" },
+              { Icon: FaGooglePlusG, link: "#" }, // Replace "#" with your Google+ link if available
+              { Icon: FaInstagram, link: "https://www.instagram.com/qr_gym/?igsh=MmdyNzlobGtlbWE&utm_source=qr" },
+              { Icon: FaTiktok, link: "https://www.tiktok.com/@qrgym0?_r=1&_t=ZS-9197GaYMHQ7" },
+            ].map((social, i) => (
+              <a
+                key={i}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-11 sm:h-11 bg-[#141414] flex items-center justify-center hover:bg-[#ff4d2d] transition cursor-pointer"
+                aria-label={`Visit our ${social.Icon.name} page`}
+              >
+                <social.Icon className="text-white" />
+              </a>
+            ))}
           </div>
+          
+          <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm text-white/50">
+            <span className="hover:text-white cursor-pointer">
+              Privacy Policy
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              Terms & Condition
+            </span>
+          </div>
+        </div>
+      </div>
+  
 
         </footer>
       </div>

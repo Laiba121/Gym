@@ -14,21 +14,44 @@ const WhyChooseUs = () => {
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           
-          {/* Left Image */}
-          <div className="relative w-full h-full">
-            <img
-              src="./images/whychoose.jpg"
-              alt="Gym"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0" />
-          </div>
+          {/* Left Image with Play Button */}
+<div className="relative w-full h-full overflow-hidden group">
+  <img
+    src="./images/whychoose.jpg"
+    alt="Gym"
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+  />
+  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+  
+  {/* Animated Circle Play Button */}
+  <a 
+    href="https://www.tiktok.com/@qrgym0/video/7584207811815542034?_r=1&_t=ZS-9197GaYMHQ7" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 group/btn"
+    aria-label="Play video on TikTok"
+  >
+    <div className="relative w-20 h-20 md:w-24 md:h-24">
+      {/* Outer pulsating ring */}
+      <div className="absolute inset-0 rounded-full bg-[#A58120]/20 animate-ping"></div>
+      
+      {/* Middle ring */}
+      <div className="absolute inset-2 rounded-full bg-[#A58120]/40 animate-pulse"></div>
+      
+      {/* Inner circle with play icon */}
+      <div className="absolute inset-4 rounded-full bg-[#A58120] flex items-center justify-center transition-all duration-300 group-hover/btn:scale-110 group-hover/btn:bg-[#A58120] group-hover/btn:shadow-lg group-hover/btn:shadow-[#A58120]/50">
+        {/* Play icon (triangle) */}
+        <div className="w-0 h-0 border-t-[12px] border-b-[12px] border-l-[20px] border-transparent border-l-white ml-1"></div>
+      </div>
+    </div>
+  </a>
+</div>
 
           {/* Right Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 h-full">
             
             {/* Card 1 */}
-            <div className="bg-[#ff4d2d] p-10 flex flex-col justify-between">
+            <div className="bg-[#A58120] p-10 flex flex-col justify-between">
               <FaWarehouse className="text-4xl mb-6" />
               <h3 className="text-xl font-[Platia] font-extrabold uppercase mb-4">
                 22,000 Square Feet Gym
@@ -65,7 +88,7 @@ const WhyChooseUs = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="bg-[#ff4d2d] p-10 flex flex-col justify-between">
+            <div className="bg-[#A58120] p-10 flex flex-col justify-between">
               <FaDumbbell className="text-4xl mb-6" />
               <h3 className="text-xl font-[Platia] font-extrabold uppercase mb-4">
                 Modern Training Equipment

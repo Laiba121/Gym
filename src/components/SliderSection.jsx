@@ -28,7 +28,7 @@ export default function SliderSection() {
 
       {/* FRONT ORANGE STRIP */}
       <div className="absolute inset-0 flex justify-center items-center overflow-hidden z-10">
-        <div className="relative bg-[#ff4d24] w-[150%] rotate-[-1deg] py-2 px-12">
+        <div className="relative bg-[#A58120] w-[150%] rotate-[-1deg] py-2 px-12">
           <div className="border-t-3 border-b-3 border-black py-1 px-2 box-border rounded-md overflow-hidden">
             <div className="flex w-max animate-marquee-left">
               {[...items, ...items, ...items].map((item, i) => (
@@ -55,7 +55,7 @@ function StripItem({ text, dark }) {
       </span>
       <span
         className={`text-5xl font-black ${
-          dark ? "text-[#ff4d24]" : "text-black"
+          dark ? "text-[#A58120]" : "text-black"
         }`}
       >
         ✦

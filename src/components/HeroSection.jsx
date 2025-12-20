@@ -12,7 +12,7 @@ export default function HeroSection() {
       />
 
       {/* Dark → Orange Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-orange-900/60 to-black opacity-90 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-yellow-700/60 to-black opacity-90 z-10"></div>
 
       {/* X Background Pattern */}
       <div className="absolute inset-0 flex items-center justify-center opacity-40 z-20">
@@ -20,15 +20,7 @@ export default function HeroSection() {
         <div className="absolute w-[180%] h-[180%] -rotate-45 bg-orange-800/20"></div>
       </div>
 
-      {/* Silhouettes */}
-      <img
-        src="/images/parti3.png"
-        className="absolute left-0 top-0 h-full object-cover opacity-80 z-30"
-      />
-      <img
-        src="/images/parti3.png"
-        className="absolute right-0 top-0 h-full object-cover opacity-80 z-30"
-      />
+    
 
   
 
@@ -56,13 +48,13 @@ export default function HeroSection() {
 
 
 <div className="absolute right-20 md:right-40 top-1/6 flex flex-row gap-2 z-50">
-  <ImCross className="text-orange-500 md:w-9 md:h-9 animate-pulse-cross" />
-  <ImCross className="text-orange-500 md:w-9 md:h-9 animate-pulse-cross" />
+  <ImCross className="text-[#A58120] md:w-9 md:h-9 animate-pulse-cross" />
+  <ImCross className="text-[#A58120] md:w-9 md:h-9 animate-pulse-cross" />
 </div>
 
 <div className="absolute left-6 md:left-10 bottom-1/3 sm:bottom-1/4 flex flex-row gap-2 z-50">
-  <ImCross className="text-orange-500 md:w-8 md:h-8 animate-pulse-cross" />
-  <ImCross className="text-orange-500 md:w-8 md:h-8 animate-pulse-cross" />
+  <ImCross className="text-[#A58120] md:w-8 md:h-8 animate-pulse-cross" />
+  <ImCross className="text-[#A58120] md:w-8 md:h-8 animate-pulse-cross" />
 </div>
 
 

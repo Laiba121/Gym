@@ -25,9 +25,14 @@ export default function ServicesPage() {
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2">
             Our Services
           </h1>
-          <p className="text-[#ff4d2d] text-lg sm:text-xl md:text-2xl mb-6 tracking-wide">
+          <p className="text-[#ff4d2d] text-lg sm:text-xl md:text-2xl tracking-wide">
             Explore what we offer to boost your fitness journey
           </p>
+           <p className="mt-4 text-sm sm:text-base tracking-widest uppercase">
+          <span className="text-white">Home</span>
+          <span className="text-white mx-2">•</span>
+          <span className="text-[#ff4d2d]">Services</span>
+        </p>
         </div>
       </section>
 

@@ -10,7 +10,7 @@ export default function Header() {
     { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about" },
     { name: "SERVICES", path: "/services" },
-    { name: "CONTACT", path: "/#contact" },
+    { name: "CONTACT", path: "/contact" },
   ];
 
   useEffect(() => {
@@ -30,33 +30,38 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex items-center justify-between">
           {/* LOGO */}
-          <div className="flex items-center space-x-4 py-6">
-            <img src="/images/logo.png" alt="logo" className="h-10 w-auto" />
-            <span className="text-white text-2xl font-bold tracking-wide">
-              QRGYM
-            </span>
+          <div className="flex items-center space-x-4">
+            <img src="/images/qrlogo1.png" alt="logo" className="h-25 w-auto" />
+          
           </div>
 
-          {/* DESKTOP MENU */}
+          {/* DESKTOP MENU - Updated with orange line animation */}
           <nav className="hidden lg:flex items-center text-white text-sm font-semibold">
             {menuItems.map((item) => (
               <Link key={item.name} to={item.path}>
-                <div className="px-8 xl:px-12 py-6 border-r border-white/10 hover:text-[#ff4d2d] transition cursor-pointer">
+                <div className="px-8 xl:px-12 py-6 border-r border-white/10 hover:text-[#A58120] transition cursor-pointer relative overflow-hidden group">
+                  {/* Orange line animation */}
+                  <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#A58120] group-hover:w-full transition-all duration-300" />
                   {item.name}
                 </div>
               </Link>
             ))}
           </nav>
 
-          {/* DESKTOP CTA */}
-          <div className="hidden lg:flex items-center px-6 py-4 xl:px-10 xl:py-6 bg-[#ff4d2d] hover:bg-[#ff6a4d] transition text-black font-extrabold tracking-widest cursor-pointer">
-            JOIN US TODAY
-          </div>
+         {/* DESKTOP CTA - Shimmer effect */}
+<div className="hidden lg:flex items-center px-6 py-4 xl:px-10 xl:py-6 bg-[#A58120] text-black font-extrabold tracking-widest cursor-pointer 
+                relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-[#A58120]/50">
+  <span className="relative z-10 group-hover:text-white transition-colors duration-500">JOIN US TODAY</span>
+  
+  {/* Shimmer animation */}
+  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent 
+                   group-hover:translate-x-full transition-transform duration-1000" />
+</div>
 
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden flex items-center justify-center bg-[#ff4d2d] px-4 py-2 transition"
+            className="lg:hidden flex items-center justify-center bg-[#A58120] px-4 py-2 transition"
           >
             {open ? (
               <HiXMark className="text-black text-3xl transition-transform duration-300" />
@@ -76,14 +81,13 @@ export default function Header() {
         <nav className="flex flex-col text-white text-sm font-semibold text-center">
           {menuItems.map((item) => (
             <Link key={item.name} to={item.path} onClick={() => setOpen(false)}>
-              <div className="px-6 py-5 border-b border-white/10 hover:bg-[#ff4d2d] hover:text-black transition cursor-pointer tracking-widest">
+              <div className="px-6 py-5 border-b border-white/10 hover:bg-[#A58120] hover:text-black transition cursor-pointer tracking-widest">
                 {item.name}
               </div>
             </Link>
           ))}
 
-          {/* MOBILE CTA */}
-          <div className="mx-auto w-40 mb-10 py-4 bg-[#ff4d2d] text-black font-extrabold tracking-widest cursor-pointer transition hover:bg-[#ff6a4d]">
+         <div className="mx-auto w-40 mb-10 py-4 bg-[#A58120] text-black font-extrabold tracking-widest cursor-pointer transition hover:bg-[#A58120]">
             JOIN US TODAY
           </div>
         </nav>

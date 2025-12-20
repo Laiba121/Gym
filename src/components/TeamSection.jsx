@@ -37,7 +37,7 @@ export default function TeamSlider() {
 
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <p className="text-[#ff4d2d] uppercase tracking-widest text-xs sm:text-sm mb-2">
+          <p className="text-[#A58120] uppercase tracking-widest text-xs sm:text-sm mb-2">
             Our Trainers
           </p>
           <h2 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl xl:text-6xl tracking-wide">
@@ -64,7 +64,7 @@ export default function TeamSlider() {
                     {[FaInstagram, FaFacebookF, FaTwitter].map((Icon, idx) => (
                       <div
                         key={idx}
-                        className="w-10 h-10 bg-[#ff4d2d] rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition cursor-pointer"
+                        className="w-10 h-10 bg-[#A58120] rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition cursor-pointer"
                       >
                         <Icon />
                       </div>
@@ -77,7 +77,7 @@ export default function TeamSlider() {
                   <h3 className="text-white font-bold text-lg sm:text-xl md:text-2xl">
                     {member.name}
                   </h3>
-                  <p className="text-[#ff4d2d] uppercase tracking-widest text-xs sm:text-sm mt-2">
+                  <p className="text-[#A58120] uppercase tracking-widest text-xs sm:text-sm mt-2">
                     {member.role}
                   </p>
                 </div>
@@ -100,7 +100,7 @@ function NextArrow({ onClick }) {
         absolute top-1/2 -translate-y-1/2
         right-2 sm:right-4
         w-10 h-10 sm:w-12 sm:h-12
-        bg-[#ff4d2d] rounded-full
+        bg-[#A58120] rounded-full
         flex items-center justify-center
         text-white cursor-pointer
         z-30 shadow-lg
@@ -120,7 +120,7 @@ function PrevArrow({ onClick }) {
         absolute top-1/2 -translate-y-1/2
         left-2 sm:left-4
         w-10 h-10 sm:w-12 sm:h-12
-        bg-[#ff4d2d] rounded-full
+        bg-[#A58120] rounded-full
         flex items-center justify-center
         text-white cursor-pointer
         z-30 shadow-lg

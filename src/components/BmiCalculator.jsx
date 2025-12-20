@@ -47,14 +47,14 @@ const BMICalculator = () => {
 
   return (
     <section className="relative w-full py-32 bg-black overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#2a120c] to-black opacity-95" />
-      <div className="absolute top-0 right-0 w-[260px] h-6 bg-[#ff4d2d]" />
+      <div className="absolute inset-0 bg-black opacity-95" />
+      <div className="absolute top-0 right-0 w-[260px] h-6 bg-[#A58120]" />
 
       <div className="relative max-w-7xl mx-auto px-6 text-white">
         {/* HEADING */}
         <div className="text-center mb-20">
           <img
-            src="/images/featuredec.png"
+            src="/images/featuredec1.png"
             alt="decorative"
             className="w-17 mx-auto mb-6"
           />
@@ -92,13 +92,13 @@ const BMICalculator = () => {
 {/* Calculate BMI button with animated bg like Subscribe */}
 <button
   onClick={calculateBMI}
-  className="relative h-[58px] w-[200px] overflow-hidden font-extrabold uppercase tracking-widest bg-[#ff4d2d] text-black group"
+  className="relative h-[58px] w-[200px] overflow-hidden font-extrabold uppercase tracking-widest bg-[#A58120] text-black group"
 >
   {/* animated background */}
   <span className="absolute inset-0 bg-black translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
 
   {/* button text */}
-  <span className="relative z-10 transition-colors duration-300 group-hover:text-[#ff4d2d]">
+  <span className="relative z-10 transition-colors duration-300 group-hover:text-[#A58120]">
     Calculate BMI
   </span>
 </button>
@@ -108,7 +108,7 @@ const BMICalculator = () => {
         {/* RESULT */}
         {bmi !== null && (
           <div className="mt-16 text-center">
-            <p className="text-xl tracking-widest uppercase text-[#ff4d2d]">
+            <p className="text-xl tracking-widest uppercase text-[#A58120]">
               Your BMI
             </p>
             <p className="text-6xl font-extrabold my-4">{bmi}</p>
@@ -125,7 +125,7 @@ export default BMICalculator;
 /* ---------- INPUT COMPONENT ---------- */
 const Input = ({ label, value, onChange }) => (
   <div>
-    <label className="block text-sm tracking-widest uppercase text-[#ff4d2d] mb-3">
+    <label className="block text-sm tracking-widest uppercase text-[#A58120] mb-3">
       {label}
     </label>
     <input
@@ -133,7 +133,7 @@ const Input = ({ label, value, onChange }) => (
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={label}
-      className="w-full h-[58px] bg-transparent border border-white/10 px-5 text-white placeholder-white/50 focus:outline-none focus:border-[#ff4d2d]"
+      className="w-full h-[58px] bg-transparent border border-white/10 px-5 text-white placeholder-white/50 focus:outline-none focus:border-[#A58120]"
     />
   </div>
 );
@@ -141,13 +141,13 @@ const Input = ({ label, value, onChange }) => (
 /* ---------- SELECT COMPONENT ---------- */
 const Select = ({ label, value, onChange, options }) => (
   <div>
-    <label className="block text-sm tracking-widest uppercase text-[#ff4d2d] mb-3">
+    <label className="block text-sm tracking-widest uppercase text-[#A58120] mb-3">
       {label}
     </label>
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full h-[58px] bg-transparent border border-white/10 px-5 text-white focus:outline-none focus:border-[#ff4d2d]"
+      className="w-full h-[58px] bg-transparent border border-white/10 px-5 text-white focus:outline-none focus:border-[#A58120]"
     >
       <option value="" className="bg-black">
         Select
