@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import Newsletter from "../components/NewsletterSection";
 
 const services = [
-  { title: "GROUP WORKOUT", image: "/images/feature3.jpg", number: "01" },
+  { title: "FULLY EQUIPPED GYM", image: "/images/feature3.jpg", number: "01" },
   { title: "PERSONAL TRAINING", image: "/images/feature2.jpg", number: "02" },
-  { title: "MUSCLE BUILDING", image: "/images/feature4.jpg", number: "03" },
-  { title: "DIGITAL COACHING", image: "/images/feature5.jpg", number: "04" },
-  { title: "WEIGHTLOSS PROGRAM", image: "/images/feature1.jpg", number: "05" },
-  { title: "BODY STRETCHING", image: "/images/feature6.jpg", number: "06" },
+  { title: "GROUP CLASSES", image: "/images/feature4.jpg", number: "03" },
+  { title: "NUTROTION & FITNESS", image: "/images/feature5.jpg", number: "04" },
+  { title: "MEN'S & WOMEN'S SECTIONS", image: "/images/feature6.jpg", number: "05" },
+  { title: "LOCKER ROOMS & SHOWERS", image: "/images/feature1.jpg", number: "06" },
 ];
 
 export default function ServicesPage() {

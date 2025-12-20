@@ -16,7 +16,7 @@ export default function TeamSlider() {
     dots: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 4, // default for large screens
+    slidesToShow: 4, // default large screen
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -25,7 +25,6 @@ export default function TeamSlider() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
-      { breakpoint: 1536, settings: { slidesToShow: 4 } }, // xl
       { breakpoint: 1280, settings: { slidesToShow: 3 } }, // lg
       { breakpoint: 1024, settings: { slidesToShow: 2 } }, // md
       { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } }, // sm/mobile
@@ -34,7 +33,7 @@ export default function TeamSlider() {
 
   return (
     <section className="bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
 
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -47,10 +46,10 @@ export default function TeamSlider() {
         </div>
 
         {/* Slider */}
-        <Slider {...settings}>
+        <Slider {...settings} className="w-full">
           {team.map((member, i) => (
             <div key={i} className="px-2 sm:px-3">
-              <div className="group bg-[#111] rounded-2xl overflow-hidden transition duration-500 hover:scale-[1.03] shadow-lg">
+              <div className="group bg-[#111] rounded-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.03] shadow-lg">
 
                 {/* Image */}
                 <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]">
@@ -92,6 +91,7 @@ export default function TeamSlider() {
   );
 }
 
+// Custom Arrows
 function NextArrow({ onClick }) {
   return (
     <div
