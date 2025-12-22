@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NewsletterSection = () => {
   return (
@@ -49,7 +50,8 @@ const NewsletterSection = () => {
   </a>
 
 
-         <button className="group relative h-[60px] px-10 overflow-hidden border-2 border-[#A58120] text-[#A58120] font-extrabold tracking-widest uppercase">
+  <Link to="/contact">
+         <button className="group relative cursor-pointer h-[60px] px-10 overflow-hidden border-2 border-[#A58120] text-[#A58120] font-extrabold tracking-widest uppercase">
   
   {/* animated bg */}
   <span className="absolute inset-0 bg-[#A58120] scale-y-0 origin-bottom transition-transform duration-300 group-hover:scale-y-100" />
@@ -59,6 +61,7 @@ const NewsletterSection = () => {
     Contact Us
   </span>
 </button>
+</Link>
 
         </div>
       </div>

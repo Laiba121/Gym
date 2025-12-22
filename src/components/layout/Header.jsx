@@ -27,13 +27,18 @@ export default function Header() {
         scrolled ? "fixed top-0 shadow-md" : "relative"
       } transition-all duration-300`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-3">
         <div className="flex items-center justify-between">
           {/* LOGO */}
-          <div className="flex items-center space-x-4">
-            <img src="/images/qrlogo1.png" alt="logo" className="h-25 w-auto" />
-          
-          </div>
+         <div className="flex items-center space-x-4">
+  <Link to="/">
+    <img
+      src="/images/qrlogo.jpg"
+      alt="logo"
+      className="h-17 w-auto cursor-pointer"
+    />
+  </Link>
+</div>
 
           {/* DESKTOP MENU - Updated with orange line animation */}
           <nav className="hidden lg:flex items-center text-white text-sm font-semibold">
@@ -49,6 +54,7 @@ export default function Header() {
           </nav>
 
          {/* DESKTOP CTA - Shimmer effect */}
+           <Link to="contact">
 <div className="hidden lg:flex items-center px-6 py-4 xl:px-10 xl:py-6 bg-[#A58120] text-black font-extrabold tracking-widest cursor-pointer 
                 relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-[#A58120]/50">
   <span className="relative z-10 group-hover:text-white transition-colors duration-500">JOIN US TODAY</span>
@@ -57,6 +63,7 @@ export default function Header() {
   <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent 
                    group-hover:translate-x-full transition-transform duration-1000" />
 </div>
+</Link>
 
           {/* MOBILE TOGGLE */}
           <button

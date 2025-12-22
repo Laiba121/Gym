@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SliderSection from "./SliderSection";
+import { Link } from "react-router-dom";
 
 
 export default function HeroFitnessExact() {
@@ -38,9 +39,11 @@ export default function HeroFitnessExact() {
           </p>
 
           {/* CTA */}
+
          <div className="mt-10 flex items-center justify-center gap-4">
+  <Link to="about">
  <button
-  className="relative px-7 py-4 bg-gray-600 text-white text-sm font-semibold uppercase tracking-wide
+  className="relative px-7 py-4 cursor-pointer bg-gray-600 text-white text-sm font-semibold uppercase tracking-wide
              overflow-hidden group transition-all duration-500"
 >
   {/* Left Orange Line - expands from 0 to half width */}
@@ -60,7 +63,9 @@ export default function HeroFitnessExact() {
     {/* Button Text */}
     <span className="relative z-10">Get Started Today +</span>
   </button>
+  </ Link>
 </div>
+
 
 
           

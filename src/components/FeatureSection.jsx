@@ -26,12 +26,12 @@ function PrevArrow({ onClick }) {
 
 
 const cards = [
-  { title: "FULLY EQUIPPED GYM", image: "/images/feature3.jpg", number: "01" },
-  { title: "PERSONAL TRAINING", image: "/images/feature2.jpg", number: "02" },
-  { title: "GROUP CLASSES", image: "/images/feature4.jpg", number: "03" },
-  { title: "NUTROTION & FITNESS", image: "/images/feature5.jpg", number: "04" },
-  { title: "MEN'S & WOMEN'S SECTIONS", image: "/images/feature6.jpg", number: "05" },
-  { title: "LOCKER ROOMS & SHOWERS", image: "/images/feature1.jpg", number: "06" },
+  { title: "FULLY EQUIPPED GYM", image: "/images/gym1.jpg", number: "01" },
+  { title: "PERSONAL TRAINING", image: "/images/gym2.jpg", number: "02" },
+  { title: "GROUP CLASSES", image: "/images/gym6.jpg", number: "03" },
+  { title: "NUTRITION & FITNESS", image: "/images/gym4.jpg", number: "04" },
+  { title: "MEN'S & WOMEN'S SECTIONS", image: "/images/gym3.jpg", number: "05" },
+  { title: "LOCKER ROOMS & SHOWERS", image: "/images/gym1.jpg", number: "06" },
 ];
 
 export default function ServicesSection() {

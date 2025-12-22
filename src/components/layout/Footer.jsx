@@ -22,11 +22,13 @@ const Footer = () => {
 
               {/* LEFT */}
               <div className="text-center lg:text-left">
+                 < Link to="/">
                 <img
-                  src="/images/qrlogo1.png"
+                  src="/images/qrlogo.jpg"
                   alt="Fitness Icon"
                   className="w-16 sm:w-30 mb-6 mx-auto lg:mx-0"
                 />
+                </Link>
                 <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-extrabold leading-[1.1] tracking-widest">
                   ACHIEVE <br /> WELLBEING
                 </h2>
@@ -36,14 +38,17 @@ const Footer = () => {
               </div>
 
               {/* CENTER */}
+
               <div className="relative pl-0 lg:pl-10 text-center lg:text-left">
                 <span className="hidden lg:block absolute left-0 top-0 h-full bg-white/10" />
                 <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
+                  < Link to="/">
                   <img
-                    src="/images/qrlogo1.png"
+                    src="/images/qrlogo.jpg"
                     alt="QRGYM Logo"
                     className="w-10 h-auto object-contain sm:w-12 sm:h-12"
                   />
+                  </Link>
                   <h3 className="text-xl sm:text-2xl text-[#A58120] font-semibold tracking-[0.15em]">
                     GYM
                   </h3>
