@@ -94,7 +94,7 @@ export default function Header() {
             </Link>
           ))}
 
- <Link to="/contact">
+ <Link to="/contact"  onClick={() => setOpen(false)}>
          <div className="mx-auto w-40 mb-10 py-4 bg-[#A58120] text-black font-extrabold tracking-widest cursor-pointer transition hover:bg-[#A58120]">
             JOIN US TODAY
           </div>
