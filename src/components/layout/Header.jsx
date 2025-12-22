@@ -94,9 +94,11 @@ export default function Header() {
             </Link>
           ))}
 
+ <Link to="/contact">
          <div className="mx-auto w-40 mb-10 py-4 bg-[#A58120] text-black font-extrabold tracking-widest cursor-pointer transition hover:bg-[#A58120]">
             JOIN US TODAY
           </div>
+          </Link>
         </nav>
       </div>
     </header>
